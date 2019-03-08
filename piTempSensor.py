@@ -50,7 +50,8 @@ class GUI:
         self.root.destroy()
 
     def update_text(self):
-        self.tempLabel['text'] = str(readSensor(self.sensor)) + "C"
+        # self.tempLabel['text'] = str(readSensor(self.sensor)) + "C"
+        self.tempLabel['text'] = "%0.1f C" % readSensor(self.sensor)
         threading.Timer(1000, self.update_text).start()
 
 
