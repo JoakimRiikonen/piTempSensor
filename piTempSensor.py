@@ -5,6 +5,7 @@ from tkinter import ttk
 class GUI:
     def __init__(self):
         self.root = tk.Tk()
+        self.root.attributes("-fullscreen", True)
         self.root.title("piTempSensor")
         self.root.geometry("480x320")
         self.mainframe = tk.Frame(self.root, bg='black')
@@ -15,8 +16,6 @@ class GUI:
                                     fg="white", font=("Arial", 100))
 
         self.tempLabel.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
-
-
         self.root.mainloop()
 
 if __name__ == '__main__':
